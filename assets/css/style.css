@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  text-align: center;
+  height: 100%;
+  font-size: 18px;
+}
+
+.container {
+  background-color: black;
+  width: 1000px;
+  height: 960px;
+}
+
+.wrapper h1,h2 {
+  color: red;
+  font-family: 'Creepster', cursive;
+  background-color: black;
+
+
+}
+
+#choices {
+  margin: 10px;
+  /*font-family: 'Barrio', cursive;*/
+  font-family: 'Nosifer', cursive;
+  color: red;
+  min-height: 500px;
+  width: 750px;
+  padding: 10px;
+  font-size: 40px;
+  font-weight: bold;
+  background-color: white;
+  text-shadow: 1px 1px ;
+  border: 3px solid;
+  opacity: 0.8;
+}
+/*.TRcolor {
+  background-color: white;
+  color: red;
+  font-family: 'Nosifer',cursive;
+}*/
+
+
+.picture {
+  background-image: url(..//images/horrorpic.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.answers {
+  font-size: 15px;
+}
+
+.question {
+  font-size: 20px;
+}
