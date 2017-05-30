@@ -1,42 +1,103 @@
 $( document ).ready(function() {
 
-  var panel = $('#choices');
-  var countStartNumber = 25;
+  var number = 25;
+  var intervalId;
 
-  $(document).on('click', '#choices', function(e) {
-    $('choices').prepend('<h3>Time Remaining: <span id="choices">25</span> Seconds</h3>');
-    game.loadQuestion();
+    $("#submit").on("click", stop);
+    $("#remaining").on("click", run);
+
+    function run () {
+      intervalId = setInterval(decrement, 2500);
+    }
+    function decrement() {
+      number--;
+
+      $("#remaining").html("<h3>" + number + "</h3>");
+        if (number === 0) {
+        stop();
+          alert("Time Up!");
+      }
+    }
+    function stop() {
+      clearInterval(intervalId);
+    }
+
+    run();
+
   });
 
-  var questions = [{
-  question: "What year did the first halloween movie come out?",
-  answers: ["1975", "1981", "1978", "1980"],
-  correctAnswer: "1978",
-}, {
-  question: "Which Character is known for the Nightmare On Elm Street Series?",
-  answers: ["Freddy Kruger", "Jason Voorhees", "Micheal Myers", "Leperchaun"],
-  correctAnswer: "Freddy Kruger",
-}, {
-  question: "Which horror movie character is a serial killer possessing a doll?",
-  answers: ["IT", "Chucky", "Preacher Kane", "Freddy Kruger"],
-  correctAnswer: "Chucky",
-}, {
+//   var correctAnswer = 0;
+//   var incorrectAnswer = 0;
+//   var answers [];
+//   var questions = [{
+//   question: "What year did the first halloween movie come out?",
+//   answers: ["1975", "1981", "1978", "1980"],
+//   correctAnswer: "1978",
+// }, {
+//   question: "Which Character is known for the Nightmare On Elm Street Series?",
+//   answers: ["Freddy Kruger", "Jason Voorhees", "Micheal Myers", "Leperchaun"],
+//   correctAnswer: "Freddy Kruger",
+// }, {
+//   question: "Which horror movie character is a serial killer possessing a doll?",
+//   answers: ["IT", "Chucky", "Preacher Kane", "Freddy Kruger"],
+//   correctAnswer: "Chucky",
+// }, {
 
-  var game = {
-    questions:questions,
-    currentQuestion:0,
-    counter:countStartNumber,
-    correct:0,
-    incorrect:0,
-    countdown: function(){
-      game.counter--;
-      $('#choices').html(game.counter);
+  // function gameTotal(value){
+  //   if (answers.indexOf(userKey) === correctAnswer){
+  //         for (var i = 0; i < answers.length; i++){
+  //            = "_";
+  //         }
 
-      if (game.counter === 0){
-        console.log('TIME UP');
-        game.timeUp();
-      }
-    },
+
+
+
+
+
+
+
+
+  //     if (correctAnswer > targetScore){
+  //         //LOSING
+  //         alert("LOST");
+  //         losses = losses + 1;
+  //         $("#losses").html(losses);
+  //         gameStart();
+  //     }
+  //
+  //     if (targetScore == currentScore){
+  //         alert("WIN");
+  //         //WINNING
+  //         wins = wins + 1;
+  //         $("#wins").html(wins);
+  //         gameStart();
+  //     }
+  // }
+
+
+
+
+
+
+
+
+
+
+  // var game = {
+  //   questions:questions,
+  //   currentQuestion:0,
+  //   counter:countStartNumber,
+  //   correct:0,
+  //   incorrect:0,
+  //   countdown: function(){
+  //     game.counter--;
+  //     $('#choices').html(game.counter);
+  //
+  //     if (game.counter === 0){
+  //       console.log('TIME UP');
+  //       game.timeUp();
+  //     }
+  //   },
 
 
 
