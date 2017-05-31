@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   </head>
-
   <body>
   <div class="container">
     <header id="head">
@@ -18,7 +17,6 @@
           <!-- <button class="button" <h2>Meet Your Fate</h2></button> -->
         </div>
     </header>
-
     <div class="row picture">
       <div class="col-md-2 col-md-offset-2">
         <div id="choices">
@@ -31,7 +29,6 @@
             <br>
           <div id="question">
              <p>Question #1 What year did the first halloween movie come out?</p>
-
             <form id="answers1">
             <ul id="answers1">
              <li>
@@ -47,49 +44,47 @@
              <label><input name="a" type="radio" value=1980>1980</label>
              </li>
          </ul>
-         <input type="submit" id="check" value="Submit">
+         <button id="check" type="submit">Submit</button>
        </form>
          <div id="question">
              <p>Question #2 Which Character is known for the "Nightmare On Elm Street" Series?</p>
          </div>
-
-         <form id="answers2">
+      <form id="answers2">
          <ul id="answers2">
              <li>
-             <label><input data-key="a" type="radio">Freddy Kruger</label>
+             <label><input name="b" type="radio" value="Freddy Kruger">Freddy Kruger</label>
              </li>
              <li>
-             <label><input data-key="b" type="radio">Jason Voorhees</label>
+             <label><input name="b" type="radio" value="Jason Voorhees">Jason Voorhees</label>
              </li>
              <li>
-             <label><input data-key="c" type="radio">Michael Myers</label>
+             <label><input name="b" type="radio" value="Michael Myers">Michael Myers</label>
              </li>
              <li>
-             <label><input data-key="d" type="radio">Leperchaun</label>
+             <label><input name="b" type="radio" value="Leperchaun">Leperchaun</label>
              </li>
          </ul>
-         <input type="submit" value="Submit">
+         <button id="check2" type="submit">Submit</button>
        </form>
          <div id="question">
              <p>Question #3 Which horror movie character is a serial killer possessing a doll?</p>
          </div>
-
          <form id="answers3">
          <ul id="answers3">
              <li>
-             <label><input data-key="a" type="radio">IT</label>
+             <label><input name="c" type="radio" value="IT">IT</label>
              </li>
              <li>
-             <label><input data-key="b" type="radio">Chucky</label>
+             <label><input name="c" type="radio" value="Chucky">Chucky</label>
              </li>
              <li>
-             <label><input data-key="c" type="radio">Preacher Kane</label>
+             <label><input name="c" type="radio" value="Preacher Kane">Preacher Kane</label>
            </li>
              <li>
-             <label><input data-key="d" type="radio">Freddy Krueger</label>
+             <label><input name="c" type="radio" value="Freddy Kruger">Freddy Kruger</label>
              </li>
          </ul>
-         <input type="submit" value="Submit">
+         <button id="check3" type="submit">Submit</button>
        </form>
          <!-- <div id="submit"> -->
            <!-- <input type="submit" value="Submit"> -->
@@ -98,9 +93,6 @@
       </div>
     </div>
   </div>
-
-
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
   </body>
 </html>
