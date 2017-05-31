@@ -7,7 +7,7 @@ $( document ).ready(function() {
     $("#remaining").on("click", run);
 
     function run () {
-      intervalId = setInterval(decrement, 2500);
+      intervalId = setInterval(decrement, 1000);
     }
     function decrement() {
       number--;
@@ -26,22 +26,35 @@ $( document ).ready(function() {
 
   });
 
-//   var correctAnswer = 0;
-//   var incorrectAnswer = 0;
-//   var answers [];
-//   var questions = [{
-//   question: "What year did the first halloween movie come out?",
-//   answers: ["1975", "1981", "1978", "1980"],
-//   correctAnswer: "1978",
-// }, {
-//   question: "Which Character is known for the Nightmare On Elm Street Series?",
-//   answers: ["Freddy Kruger", "Jason Voorhees", "Micheal Myers", "Leperchaun"],
-//   correctAnswer: "Freddy Kruger",
-// }, {
-//   question: "Which horror movie character is a serial killer possessing a doll?",
-//   answers: ["IT", "Chucky", "Preacher Kane", "Freddy Kruger"],
-//   correctAnswer: "Chucky",
-// }, {
+  var correctAnswer = 0;
+  var incorrectAnswer = 0;
+  var answers = [];
+  // var questions = [{
+  // var userAnswer1 = $('input[name=a]:checked', '#answers1').html();
+  // var userAnswer1= $("form :radio")
+  // var check = function(){
+    $("#check").click(function(event){
+      event.preventdefault();
+      var userAnswer1 = $("input[name='a']:checked").val();
+      console.log(userAnswer1);
+    });
+
+
+  // check();
+  var questions = [{
+  question: "What year did the first halloween movie come out?",
+  answers: ["1975", "1981", "1978", "1980"],
+  correctAnswer: "1978"
+}, {
+  question: "Which Character is known for the Nightmare On Elm Street Series?",
+  answers: ["Freddy Kruger", "Jason Voorhees", "Micheal Myers", "Leperchaun"],
+  correctAnswer: "Freddy Kruger"
+}, {
+  question: "Which horror movie character is a serial killer possessing a doll?",
+  answers: ["IT", "Chucky", "Preacher Kane", "Freddy Kruger"],
+  correctAnswer: "Chucky"
+}]
+
 
   // function gameTotal(value){
   //   if (answers.indexOf(userKey) === correctAnswer){
