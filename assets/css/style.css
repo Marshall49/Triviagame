@@ -7,8 +7,9 @@ body {
 
 .container {
   background-color: black;
-  width: 1000px;
-  height: 960px;
+  /*width: 1000px;
+  height: 960px;*/
+  background-position: center;
 }
 
 .wrapper h1,h2 {
@@ -66,4 +67,21 @@ body {
   text-shadow: 1px 1px ;
   border: 3px solid;
   opacity: 0.8;*/
+}
+
+#scoreboard {
+  margin: 10px;
+  /*font-family: 'Barrio', cursive;*/
+  font-family: 'Nosifer', cursive;
+  color: red;
+  /*min-height: 500px;*/
+  width: 750px;
+  height: 300px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: white;
+  text-shadow: 1px 1px ;
+  border: 2px solid;
+  opacity: 0.8;
 }
