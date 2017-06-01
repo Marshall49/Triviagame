@@ -42,59 +42,63 @@ var incorrectAnswer = 0;
   // var correctAnswer = 0;
   // var incorrectAnswer = 0;
   // var answers = [];
-$('#answers1').submit(function(){
+$('#answers1').submit(function(event){
       //stop the form from submitting!
     event.preventDefault();
     userAnswer1 = $('input[name=a]:checked', '#answers1').val();
     console.log(userAnswer1);
     if(userAnswer1 == answer1){
       correctAnswers = correctAnswers +1;
-    $("correctAnswers").html(correctAnswers);
+    $("#correctAnswers").html("correct Answers:" + correctAnswers);
         console.log(correctAnswers)
       }
-      else(userAnswer1 != answer1);
+      else if(userAnswer1 != answer1){
         incorrectAnswer = incorrectAnswer +1;
-        $("incorrectAnswer").html(incorrectAnswer);
+        $("#incorrectAnswer").html("incorrect Answer:" + incorrectAnswer);
         console.log(incorrectAnswer)
-      })
+      }
 
+})
 
-
-$('#answers2').submit(function(){
+$('#answers2').submit(function(event){
       //stop the form from submitting!
     event.preventDefault();
     userAnswer2 = $('input[name=b]:checked', '#answers2').val();
     console.log(userAnswer2)
     if(userAnswer2 == answer2){
     correctAnswers = correctAnswers +1;
-    $("correctAnswers").html(correctAnswers);
+    $("#correctAnswers").html("correct Answers:" + correctAnswers);
     console.log(correctAnswers)
     }
-      else(userAnswer2 != answer2);
+      else if(userAnswer2 != answer2){
       incorrectAnswer = incorrectAnswer +1;
-      $("incorrectAnswer").html(incorrectAnswer);
+      $("#incorrectAnswer").html("incorrect Answer:" + incorrectAnswer);
       console.log(incorrectAnswer)
+    }
+
     })
 
 
-$('#answers3').submit(function(){
+$('#answers3').submit(function(event){
       //stop the form from submitting!
     event.preventDefault();
     userAnswer3 = $('input[name=c]:checked', '#answers3').val();
     console.log(userAnswer3)
     if(userAnswer3 == answer3){
    correctAnswers = correctAnswers +1;
-    $("correctAnswers").html(correctAnswers);
+  $("#correctAnswers").html("correct Answers:" + correctAnswers);
    console.log(correctAnswers)
     }
-      else(userAnswer3 != answer3);
+      else if(userAnswer3 != answer3){
      incorrectAnswer = incorrectAnswer +1;
-      $("incorrectAnswer").html(incorrectAnswer);
+       $("#incorrectAnswer").html("incorrect Answer:" + incorrectAnswer);
      console.log(incorrectAnswer)
-   })
+   }
 
 
 })
+
+});
   // var userAnswer1= $("form :radio")
   // var questions = [{
   //   question: "What year did the first halloween movie come out?",
